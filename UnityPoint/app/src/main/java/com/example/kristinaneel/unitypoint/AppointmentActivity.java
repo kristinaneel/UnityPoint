@@ -1,8 +1,13 @@
 package com.example.kristinaneel.unitypoint;
 
 import android.app.DialogFragment;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,16 +15,21 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import butterknife.ButterKnife;
 
 /**
  * Created by kristinaneel on 11/21/2016.
  */
 public class AppointmentActivity extends AppCompatActivity implements OnItemSelectedListener {
 
+    private static final String TAG = AppointmentActivity.class.getSimpleName();
+    //Binding drawables
+    @BindDrawable(R.drawable.ic_launcher)Drawable logo;
+
 
     String [] doctor = {"Any", "Nurse", "Nurse Practitioner", "Any Doctor", "My Doctor",};
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
 
@@ -31,7 +41,12 @@ public class AppointmentActivity extends AppCompatActivity implements OnItemSele
 
         spinner.setAdapter(arrayAdapter);
 
+        ButterKnife.bind(this);
 
+        //creates the toolbar
+        getSupportActionBar().setLogo(logo);
+        getSupportActionBar().setTitle("");
+        //handles tabs and fragments
 
     }
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
