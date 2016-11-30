@@ -8,5 +8,10 @@
         android:title="@string/about_label"
         android:orderInCategory="100"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/locations"
+        android:title="Locations"
+        android:orderInCategory="200"
+        app:showAsAction="never"/>
 
 </menu>
