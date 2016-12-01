@@ -4,7 +4,6 @@
     <string name="doctor_prompt">Choose who you would be willing to see</string>
 
 
-
     <string name="action_settings">Settings</string>
     <string name="pick_date">Pick Date</string>
     <string name="pick_time">Pick Time</string>
@@ -12,4 +11,39 @@
 
     <string name="dialog_submit">Thank you for submitting an appointment request!</string>
 
+
+
+    <!-- about page strings -->
+    <string name="why_label">Why MyUnityPoint Health?</string>
+    <string name="aboutContext">The MyUnityPoint app helps you stay healthy by giving you easy
+    access to all your Unity Point has to offer. Quickly schedule appointments, refill
+    prescriptions, view your medical records or check in with a nurse. Being sick shouldn\'t
+    require extra work, so MyUnityPoint is here to help you get from sick to recovering quick.</string>
+    <string name="subtitleAbout">The point of unity is you.</string>
+    <string name="subtitleAbout2">UnityPoint Health has a vision for healthcare, and it starts
+    with you:</string>
+    <string name="quote">""Best outcome for every patient every time.""</string>
+
+
+    <!--location page strings-->
+    <string name="loc1_name">UnityPoint Health - Hospital</string>
+    <string name="loc1_info"> (515)241-6212
+        \n 1200 Pleasant St.
+        \n Des Moines, IA 50309</string>
+
+    <string name="loc2_name">UnityPoint Health - Medical Clinic</string>
+    <string name="loc2_info"> (515) 266-1199
+        \n 1205 Copper Creek Dr.
+        \n Pleasant Hill, IA 50327</string>
+
+    <string name="loc3_name">UnityPoint Clinic - Family Medicine</string>
+    <string name="loc3_info"> (515) 279-6424
+        \n 2103 Ingersoll Ave.
+        \n Des Moines, IA 50312</string>
+
+    <string name="loc4_name">UnityPoint Clinic - Family Medicine</string>
+    <string name="loc4_info"> (515) 274-1518
+        \n Uptown Center
+        \n 4116 University Ave.
+        \n Des Moines, IA 50311</string>
 </resources>

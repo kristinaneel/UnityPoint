@@ -1,6 +1,7 @@
 package com.example.kristinaneel.unitypoint;
 
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -78,11 +79,17 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         switch(item.getItemId()){
             case R.id.about:
-                return true;
+                Intent intent = new Intent(this, AboutActivity.class);
+                this.startActivity(intent);
+                break;
             case R.id.locations:
-                return true;
+                Intent intent2 = new Intent(this, LocationsActivity.class);
+                this.startActivity(intent2);
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
 
