@@ -32,7 +32,7 @@
         android:layout_width="300dp"
         android:layout_height="290dp"
         android:id="@+id/imageView"
-        android:src="@drawable/doctorWithChild"
+        android:src="@drawable/doctor_with_child"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

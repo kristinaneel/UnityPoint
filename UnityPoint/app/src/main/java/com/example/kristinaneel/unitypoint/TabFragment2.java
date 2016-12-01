@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -23,24 +22,22 @@ public class TabFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_fragment_2, container, false);
         Spinner spinner = (Spinner) v.findViewById(R.id.spinner);
-        //spinner.setOnItemSelectedListener(this.getActivity());
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item,doctor);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, doctor);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
 
-        spinner.setAdapter(arrayAdapter);
-
-        return inflater.inflate(R.layout.tab_fragment_2, container, false);
+        return v;
     }
 
 
 
-    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
-        String item = parent.getItemAtPosition(pos).toString();
-    }
-
-    public void onNothingSelected(AdapterView<?> parent){
-
-    }
+//    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
+//        String item = parent.getItemAtPosition(pos).toString();
+//    }
+//
+//    public void onNothingSelected(AdapterView<?> parent){
+//
+//    }
 
 
 
