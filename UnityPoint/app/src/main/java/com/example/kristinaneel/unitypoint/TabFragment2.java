@@ -1,5 +1,7 @@
 package com.example.kristinaneel.unitypoint;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -26,37 +28,14 @@ public class TabFragment2 extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+
+
         return v;
     }
 
 
 
-//    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id){
-//        String item = parent.getItemAtPosition(pos).toString();
-//    }
-//
-//    public void onNothingSelected(AdapterView<?> parent){
-//
-//    }
 
-
-
-
-
-//    public void open(View v){
-//        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-//        alertDialogBuilder.setMessage("Thank you for submitting an appointment request");
-//        alertDialogBuilder.setPositiveButton("Home", new DialogInterface.OnClickListener(){
-//            public void onClick(DialogInterface dialog, int which){
-//                Intent intent = new Intent(this, HomeActivity.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                    this.startActivity(intent);
-//            }
-//        });
-//
-//        AlertDialog alertDialog = alertDialogBuilder.create();
-//        alertDialog.show();
-//    }
 
 
 }
