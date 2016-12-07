@@ -20,7 +20,7 @@ public class LogIn extends AppCompatActivity {
     private TextView error;
     private TextView user;
     private TextView pass;
-    private int userStuff;
+    private Integer userStuff = 0;
     private String passStuff;
 
     private Button sign;
@@ -30,7 +30,6 @@ public class LogIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-
 
         error = (TextView) findViewById(R.id.errorText);
         error.setAlpha(0.0f);
@@ -46,52 +45,53 @@ public class LogIn extends AppCompatActivity {
                     Log.v("userList", userList.toString());
 
                 user = (TextView) findViewById(R.id.userNameText);
-                userStuff = Integer.parseInt(user.getText().toString());
-                    pass = (TextView) findViewById(R.id.passwordText2);
-                    passStuff = pass.getText().toString();
-                    Boolean isLoggedIn = false;
-                    Boolean isPassword = false;
 
-                    for(int i = 0; i<userList.size(); i++){
-                        if(userStuff == (userList.get(i).getUserId())){
-                            isLoggedIn = true;
-                            if(passStuff.matches(userList.get(i).getPassword())){
-                                isPassword = true;
-                                Intent intent = new Intent(LogIn.this,MainActivity.class);
-                                startActivity(intent);
-                            }
 
-                        }
 
+                    Log.v("lookhere", user.getText().toString());
+
+                    if (user.getText().toString().equals("")){
+                        userStuff = null;
                     }
-                if(!isLoggedIn) {
-                    Toast.makeText(LogIn.this, "You did not enter a correct userID", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(!isPassword) {
-                    Toast.makeText(LogIn.this, "You did not enter a correct password", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                    else {
+                        userStuff = Integer.parseInt(user.getText().toString());
+//                    }
+                        pass = (TextView) findViewById(R.id.passwordText2);
+                        passStuff = pass.getText().toString();
+                        Boolean isLoggedIn = false;
+                        Boolean isPassword = false;
+
+                        for (int i = 0; i < userList.size(); i++) {
+                            if (userStuff == (userList.get(i).getUserId())) {
+                                isLoggedIn = true;
+                                if (passStuff.matches(userList.get(i).getPassword())) {
+                                    isPassword = true;
+                                    Intent intent = new Intent(LogIn.this, MainActivity.class);
+                                    startActivity(intent);
+                                }
+                            }
+                        }
+                        if (!isLoggedIn | userStuff == null) {
+                            Toast.makeText(LogIn.this, "You did not enter a correct userID", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                        if (!isPassword | passStuff == "") {
+                            Toast.makeText(LogIn.this, "You did not enter a correct password", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }
 
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
             }
         });
-
-
         create.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
             }
-
-
         });
-
-
-
-
-
     }
 }
