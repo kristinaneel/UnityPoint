@@ -1,0 +1,15 @@
+{
+	"Users":[{
+		"FirstName": "John",
+		"LastName" : "Smith",
+		"UserId": 123894,
+		"Password" : "junk"
+	},
+	{
+		"FirstName" : "Betty",
+		"LastName" : "Jones",
+		"UserId" : 839202,
+		"Password" : "superjunk"
+	}
+	]
+}
