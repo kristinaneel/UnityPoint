@@ -24,7 +24,7 @@ public class LogIn extends AppCompatActivity {
     private String passStuff;
 
     private Button sign;
-    private Button create;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class LogIn extends AppCompatActivity {
         error.setAlpha(0.0f);
 
         sign = (Button) findViewById(R.id.signButton);
-        create = (Button) findViewById(R.id.createButton);
+
 
         sign.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -87,11 +87,6 @@ public class LogIn extends AppCompatActivity {
 
             }
         });
-        create.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
     }
 }

@@ -5,6 +5,7 @@
     android:id="@+id/activity_log_in"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app3_login"
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
@@ -19,49 +20,6 @@
         <!--android:layout_alignParentTop="true"-->
         <!--android:layout_alignParentStart="true" />-->
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="81dp"
-        android:id="@+id/userNameText"
-        android:hint="UserName"
-        android:textColor='#000000'
-        android:background="#FFF"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_below="@+id/userNameText"
-        android:layout_alignEnd="@+id/userNameText"
-        android:layout_marginTop="18dp"
-        android:id="@+id/passwordText2"
-        android:hint="Password"
-        android:textColor='#000000'
-        android:background="#FFF"/>
-
-    <Button
-        android:text="Sign In"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordText2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:id="@+id/signButton" />
-
-    <Button
-        android:text="Create Account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/createButton"
-        android:layout_below="@+id/signButton"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:text="You entered something wrong. Please try again"
         android:layout_width="wrap_content"
@@ -72,6 +30,40 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="#FFF"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/userNameText"
+        android:hint="UserName"
+        android:textColor='#000000'
+        android:background="#FFF"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Sign In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signButton"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/passwordText2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/passwordText2"
+        android:hint="Password"
+        android:textColor='#000000'
+        android:background="#FFF"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/userNameText"
+        android:layout_alignStart="@+id/userNameText" />
 
 
 </RelativeLayout>
