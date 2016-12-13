@@ -21,13 +21,14 @@ public class TabFragment1 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.tab_fragment_2, container, false);
+        View rootView = inflater.inflate(R.layout.tab_fragment_1, container, false);
+
         try {
             List<Messages> messageList = new JsonReaderMessage((MainActivity) getActivity()).getPersonList();
             Messages[] messages = messageList.toArray(new Messages[messageList.size()]);
             ArrayAdapter<Messages> adapter = new ArrayAdapter<Messages>
                     ((MainActivity) getActivity(), android.R.layout.simple_list_item_1, messages);
-            myButton = (Button) rootView.findViewById(R.id.button2);
+            myButton = (Button) rootView.findViewById(R.id.newMessageButton);
 
             myButton.setOnClickListener(new View.OnClickListener() {
                 @Override
