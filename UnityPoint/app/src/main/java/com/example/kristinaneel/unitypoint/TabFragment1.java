@@ -2,11 +2,10 @@ package com.example.kristinaneel.unitypoint;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import java.io.IOException;
@@ -16,7 +15,7 @@ import java.util.List;
  * Created by Troy on 11/25/2016.
  */
 
-public class TabFragment1 extends Fragment {
+public class TabFragment1 extends ListFragment {
     private Button myButton;
 
     @Override
@@ -26,8 +25,8 @@ public class TabFragment1 extends Fragment {
         try {
             List<Messages> messageList = new JsonReaderMessage((MainActivity) getActivity()).getPersonList();
             Messages[] messages = messageList.toArray(new Messages[messageList.size()]);
-            ArrayAdapter<Messages> adapter = new ArrayAdapter<Messages>
-                    ((MainActivity) getActivity(), android.R.layout.simple_list_item_1, messages);
+            MessageAdapter adapter = new MessageAdapter((MainActivity) getActivity(), messages);
+            setListAdapter(adapter);
             myButton = (Button) rootView.findViewById(R.id.newMessageButton);
 
             myButton.setOnClickListener(new View.OnClickListener() {
