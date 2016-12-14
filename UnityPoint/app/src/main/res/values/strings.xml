@@ -9,7 +9,8 @@
     <string name="pick_time">Pick Time</string>
     <string name="about_label">About</string>
 
-    <string name="dialog_submit">Thank you for submitting an appointment request!</string>
+    <string name="dialog_submit">Thank you for submitting an appointment request! You will recieve an
+    e-mail confirmation within 24 hours to confirm your appointment.</string>
 
 
 
