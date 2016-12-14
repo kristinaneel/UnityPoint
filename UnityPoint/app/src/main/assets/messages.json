@@ -1,0 +1,12 @@
+{
+	"messages":[
+	{
+		"sender": "Dr.Dude",
+		"text": "Hello, Luckily that issue seems to be unrelated to anything you are taking right now. I would get that checked out soon."
+	},
+	{
+		"sender": "John",
+		"text": "Hi Dr.Dude, I recently found out I have a weird bump on my leg. Should I be concerned?"
+	}
+	]
+}
