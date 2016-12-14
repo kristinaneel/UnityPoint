@@ -1,7 +1,5 @@
 package com.example.kristinaneel.unitypoint;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -16,7 +14,7 @@ import android.widget.Spinner;
  */
 
 public class TabFragment2 extends Fragment {
-        String [] doctor = {"Dr.Jacob Lawernce", "Dr.Kenneth Ross", "Dr.Kathrine Miller", "Courtney Simmons, RN", "Todd Jankins, LPN",};
+        String [] doctor = {"Select a doctor","Dr.Jacob Lawernce", "Dr.Kenneth Ross", "Dr.Kathrine Miller", "Courtney Simmons, RN", "Todd Jankins, LPN",};
     private FragmentActivity myContext;
 
 
@@ -27,9 +25,6 @@ public class TabFragment2 extends Fragment {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, doctor);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-
-
         return v;
     }
 
