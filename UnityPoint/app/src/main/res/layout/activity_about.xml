@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/UnityPoint"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,11 +23,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/why_label"
         android:id="@+id/whyLabel"
-        android:layout_marginTop="42dp"
         android:padding="10dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/textView20"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="383dp"
@@ -33,7 +45,8 @@
         android:layout_height="290dp"
         android:id="@+id/imageView"
         android:src="@drawable/doctor_with_child"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="58dp"
+        android:layout_below="@+id/whyLabel"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -43,9 +56,9 @@
         android:text="@string/subtitleAbout"
         android:id="@+id/textView6"
         android:textStyle="bold"
+        android:padding="10dp"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:padding="10dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,10 +66,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/subtitleAbout2"
         android:id="@+id/textView7"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" />
+        android:paddingRight="10dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,10 +77,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/quote"
         android:id="@+id/textView8"
+        android:textStyle="bold|italic"
         android:layout_below="@+id/textView7"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:textStyle="bold|italic" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -78,5 +90,20 @@
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignEnd="@+id/whyLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="About Us"
+        android:id="@+id/textView20"
+        android:textStyle="normal|bold"
+        android:textColor="#ffffff"
+        android:background="#00529b"
+        android:padding="15dp"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

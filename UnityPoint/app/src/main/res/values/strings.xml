@@ -9,7 +9,8 @@
     <string name="pick_time">Pick Time</string>
     <string name="about_label">About</string>
 
-    <string name="dialog_submit">Thank you for submitting an appointment request!</string>
+    <string name="dialog_submit">Thank you for submitting an appointment request! You will recieve an
+    e-mail confirmation within 24 hours to confirm your appointment.</string>
 
 
 
@@ -28,22 +29,22 @@
     <!--location page strings-->
     <string name="loc1_name">UnityPoint Health - Hospital</string>
     <string name="loc1_info"> (515)241-6212
-        \n 1200 Pleasant St.
-        \n Des Moines, IA 50309</string>
+        \n1200 Pleasant St.
+        \nDes Moines, IA 50309</string>
 
     <string name="loc2_name">UnityPoint Health - Medical Clinic</string>
     <string name="loc2_info"> (515) 266-1199
-        \n 1205 Copper Creek Dr.
-        \n Pleasant Hill, IA 50327</string>
+        \n1205 Copper Creek Dr.
+        \nPleasant Hill, IA 50327</string>
 
     <string name="loc3_name">UnityPoint Clinic - Family Medicine</string>
     <string name="loc3_info"> (515) 279-6424
-        \n 2103 Ingersoll Ave.
-        \n Des Moines, IA 50312</string>
+        \n2103 Ingersoll Ave.
+        \nDes Moines, IA 50312</string>
 
     <string name="loc4_name">UnityPoint Clinic - Family Medicine</string>
     <string name="loc4_info"> (515) 274-1518
-        \n Uptown Center
-        \n 4116 University Ave.
-        \n Des Moines, IA 50311</string>
+        \nUptown Center
+        \n4116 University Ave.
+        \nDes Moines, IA 50311</string>
 </resources>
