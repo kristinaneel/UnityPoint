@@ -5,20 +5,65 @@
     android:id="@+id/activity_log_in"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/app3_login"
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     tools:context="com.example.kristinaneel.unitypoint.LogIn">
 
-    <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@drawable/tree"-->
-        <!--android:id="@+id/imageView"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentStart="true" />-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/back"
+        android:id="@+id/imageView"
+        android:scaleType="fitEnd"
+        android:layout_above="@+id/createButton"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/userNameText"
+        android:hint="User ID"
+        android:textColor='#000000'
+        android:background="#FFF"
+        android:allowUndo="true"
+        android:fontFamily="@string/abc_action_bar_home_description_format"
+        android:layout_marginBottom="154dp"
+        android:layout_above="@+id/createButton"
+        android:layout_alignStart="@+id/passwordText2"
+        android:autoText="true"
+        android:backgroundTint="#E8F0F6" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginTop="38dp"
+        android:id="@+id/passwordText2"
+        android:hint="Password"
+        android:textColor='#000000'
+        android:background="#FFF"
+        android:fontFamily="@string/abc_action_bar_home_description_format"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#E8F0F6" />
+
+    <Button
+        android:text="Create Account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/createButton"
+        android:background="#e8f0f6"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="You entered something wrong. Please try again"
@@ -31,39 +76,26 @@
         android:layout_centerHorizontal="true"
         android:background="#FFF"/>
 
-    <EditText
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/userNameText"
-        android:hint="UserName"
-        android:textColor='#000000'
-        android:background="#FFF"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/imageView2"
+        android:src="@drawable/logo"
+        android:layout_above="@+id/userNameText"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="192dp" />
 
     <Button
         android:text="Sign In"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/signButton"
-        android:layout_marginTop="74dp"
+        android:background="#00529b"
+        android:clickable="false"
+        android:textColor="#ffffff"
         android:layout_below="@+id/passwordText2"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/passwordText2"
-        android:hint="Password"
-        android:textColor='#000000'
-        android:background="#FFF"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/userNameText"
-        android:layout_alignStart="@+id/userNameText" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
 
 
 </RelativeLayout>
