@@ -17,12 +17,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.IOException;
+import java.util.List;
 
+public class MainActivity extends AppCompatActivity {
+    public Messages[] messages;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        try{
+            messages = FetchPersonTask();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -69,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public Messages[] FetchPersonTask() throws IOException{
+        List<Messages> messagesList = new JsonReaderMessage(this).getPersonList();
+
+        Messages[] messages = messagesList.toArray(new Messages[messagesList.size()]);
+        return messages;
+    }
+    public Messages[] getMessages(){
+        return messages;
     }
 
     public void showDatePickerDialog(View v) {

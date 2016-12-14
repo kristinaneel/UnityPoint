@@ -2,31 +2,29 @@ package com.example.kristinaneel.unitypoint;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-import java.io.IOException;
-import java.util.List;
+import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Created by Troy on 11/25/2016.
  */
 
-public class TabFragment1 extends ListFragment {
+public class TabFragment1 extends Fragment {
     private Button myButton;
+    private TextView titleText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab_fragment_1, container, false);
-
-        try {
-            List<Messages> messageList = new JsonReaderMessage((MainActivity) getActivity()).getPersonList();
-            Messages[] messages = messageList.toArray(new Messages[messageList.size()]);
-            MessageAdapter adapter = new MessageAdapter((MainActivity) getActivity(), messages);
-            setListAdapter(adapter);
+            final ListView lv = (ListView) rootView.findViewById(R.id.list);
+            MessageAdapter adapter = new MessageAdapter(((MainActivity) getActivity()), ((MainActivity) getActivity()).getMessages());
+            lv.setAdapter(adapter);
+            titleText = (TextView) rootView.findViewById(R.id.titleText);
             myButton = (Button) rootView.findViewById(R.id.newMessageButton);
 
             myButton.setOnClickListener(new View.OnClickListener() {
@@ -36,9 +34,7 @@ public class TabFragment1 extends ListFragment {
                     startActivity(intent);
                 }
             });
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
         return rootView;
     }

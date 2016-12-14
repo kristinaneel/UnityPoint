@@ -39,6 +39,7 @@ public class MessageAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(myContext).inflate(R.layout.message_list_item, null);
             holder = new ViewHolder();
             holder.messageView = (TextView) convertView.findViewById(R.id.messageView);
+            holder.messageView2 = (TextView) convertView.findViewById(R.id.messageView2);
             holder.messagesCell = (RelativeLayout) convertView.findViewById(R.id.messagesCell);
             convertView.setTag(holder);
         }else{

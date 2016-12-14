@@ -23,6 +23,15 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom = "120dp"
         android:layout_marginTop = "100dp"
-        android:id="@android:id/list" />
+        android:id="@+id/list"  />
+
+    <TextView
+        android:text="Messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleText"
+        android:layout_marginTop="71dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
